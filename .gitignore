@@ -1,0 +1,13 @@
+﻿# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual Environments
+venv/
+env/
+
+# IDE & OS
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

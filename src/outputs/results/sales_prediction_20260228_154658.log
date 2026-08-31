@@ -1,0 +1,297 @@
+2026-02-28 15:46:58,402 - INFO - ======================================================================
+2026-02-28 15:46:58,402 - INFO - SALES PREDICTION PIPELINE V3 FINAL INITIALIZED
+2026-02-28 15:46:58,402 - INFO - Data Version: V3
+2026-02-28 15:46:58,402 - INFO - Mode: full
+2026-02-28 15:46:58,402 - INFO - Random Seed: 42
+2026-02-28 15:46:58,402 - INFO - ======================================================================
+2026-02-28 15:46:58,402 - INFO - ======================================================================
+2026-02-28 15:46:58,402 - INFO - STARTING SALES PREDICTION PIPELINE V3 FINAL
+2026-02-28 15:46:58,403 - INFO - Data Version: V3
+2026-02-28 15:46:58,403 - INFO - ======================================================================
+2026-02-28 15:46:58,414 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V3.csv (encoding: utf-8)
+2026-02-28 15:46:58,415 - INFO - ==================================================
+2026-02-28 15:46:58,415 - INFO - DATA VERSION INFO:
+2026-02-28 15:46:58,415 - INFO -   - File Name: Sales_Transactions_Dataset_Weekly - V3.csv
+2026-02-28 15:46:58,415 - INFO -   - Total Columns: 107
+2026-02-28 15:46:58,415 - INFO -   - Total Rows: 1104
+2026-02-28 15:46:58,415 - INFO - ==================================================
+2026-02-28 15:46:58,415 - INFO - Data loading time: 0.01 seconds
+2026-02-28 15:46:58,416 - INFO - Week sequence is continuous (no missing weeks)
+2026-02-28 15:46:58,416 - INFO - Found 52 week columns: W0 to W51
+2026-02-28 15:46:58,425 - WARNING - Found 2 potential outlier values (>746946.21)
+2026-02-28 15:46:58,426 - INFO - Sales Statistics: Min=11274.00, Max=1159691.82, Mean=71595.29, Std=225116.97
+2026-02-28 15:46:58,427 - INFO - Created base features: Week_Sin, Week_Cos, Revenue_Estimated
+2026-02-28 15:46:58,428 - INFO - Processed data: 52 rows with 5 columns
+2026-02-28 15:46:58,428 - INFO - Preprocessing time: 0.01 seconds
+2026-02-28 15:46:58,429 - INFO - Creating time-based features after split (preventing data leakage)...
+2026-02-28 15:46:58,439 - INFO - Data split (temporal, no shuffle): Train=36, Validation=6, Test=10
+2026-02-28 15:46:58,443 - INFO - Scaler stored for reuse in evaluation
+2026-02-28 15:46:58,443 - INFO - Training model: Linear Regression
+2026-02-28 15:46:58,445 - INFO -    MAE: 389885.59 | RMSE: 419440.29 | R²: -5513956.3087 | MAPE: 2951.93%
+2026-02-28 15:46:58,445 - INFO -    Weighted Score: 279716.43 | Median AE: 375307.33
+2026-02-28 15:46:58,445 - INFO -    sMAPE: 200.00% | WAPE: 2959.73%
+2026-02-28 15:46:58,445 - INFO - Training model: Ridge Regression
+2026-02-28 15:46:58,447 - INFO -    MAE: 30922.06 | RMSE: 35356.18 | R²: -39178.0276 | MAPE: 235.65%
+2026-02-28 15:46:58,447 - INFO -    Weighted Score: 22602.96 | Median AE: 33545.96
+2026-02-28 15:46:58,447 - INFO -    sMAPE: 102.12% | WAPE: 234.74%
+2026-02-28 15:46:58,447 - INFO - Training model: Lasso Regression
+2026-02-28 15:46:58,450 - INFO -    MAE: 388043.08 | RMSE: 417476.34 | R²: -5462441.0432 | MAPE: 2937.99%
+2026-02-28 15:46:58,450 - INFO -    Weighted Score: 278398.20 | Median AE: 373763.78
+2026-02-28 15:46:58,450 - INFO -    sMAPE: 200.00% | WAPE: 2945.75%
+2026-02-28 15:46:58,450 - INFO - Training model: Random Forest
+2026-02-28 15:46:58,912 - INFO -    MAE: 76502.75 | RMSE: 131881.20 | R²: -545114.9461 | MAPE: 586.27%
+2026-02-28 15:46:58,912 - INFO -    Weighted Score: 64803.50 | Median AE: 676.93
+2026-02-28 15:46:58,912 - INFO -    sMAPE: 62.61% | WAPE: 580.75%
+2026-02-28 15:46:58,913 - INFO - Training model: Gradient Boosting
+2026-02-28 15:46:58,989 - INFO -    MAE: 100782.76 | RMSE: 174232.93 | R²: -951443.7682 | MAPE: 772.38%
+2026-02-28 15:46:58,989 - INFO -    Weighted Score: 85469.68 | Median AE: 399.61
+2026-02-28 15:46:58,989 - INFO -    sMAPE: 62.80% | WAPE: 765.07%
+2026-02-28 15:46:59,039 - INFO - Feature Importance (Random Forest):
+2026-02-28 15:46:59,039 - INFO -    Week: 0.2677
+2026-02-28 15:46:59,039 - INFO -    Prev_Week: 0.0535
+2026-02-28 15:46:59,039 - INFO -    MA: 0.0843
+2026-02-28 15:46:59,039 - INFO -    Change: 0.0075
+2026-02-28 15:46:59,039 - INFO -    Std: 0.2241
+2026-02-28 15:46:59,040 - INFO -    Lag2: 0.0199
+2026-02-28 15:46:59,040 - INFO -    Lag3: 0.0047
+2026-02-28 15:46:59,040 - INFO -    Week_Sin: 0.0003
+2026-02-28 15:46:59,040 - INFO -    Week_Cos: 0.3379
+2026-02-28 15:46:59,041 - INFO - Feature Importance (Gradient Boosting):
+2026-02-28 15:46:59,041 - INFO -    Week: 0.0824
+2026-02-28 15:46:59,041 - INFO -    Prev_Week: 0.0002
+2026-02-28 15:46:59,041 - INFO -    MA: 0.0176
+2026-02-28 15:46:59,041 - INFO -    Change: 0.0000
+2026-02-28 15:46:59,041 - INFO -    Std: 0.2466
+2026-02-28 15:46:59,041 - INFO -    Lag2: 0.0000
+2026-02-28 15:46:59,041 - INFO -    Lag3: 0.0378
+2026-02-28 15:46:59,042 - INFO -    Week_Sin: 0.0002
+2026-02-28 15:46:59,042 - INFO -    Week_Cos: 0.6152
+2026-02-28 15:46:59,042 - INFO - Training time: 0.60 seconds
+2026-02-28 15:46:59,042 - INFO - --------------------------------------------------
+2026-02-28 15:46:59,042 - INFO - BEST MODEL: Ridge Regression (Weighted Score = 22602.96)
+2026-02-28 15:46:59,042 - INFO - --------------------------------------------------
+2026-02-28 15:46:59,046 - INFO - Using stored scaler for Ridge Regression
+2026-02-28 15:46:59,048 - INFO - ==================================================
+2026-02-28 15:46:59,048 - INFO - TEST SET EVALUATION - Ridge Regression
+2026-02-28 15:46:59,048 - INFO - ==================================================
+2026-02-28 15:46:59,048 - INFO - Mean Absolute Error (MAE): 189101.39
+2026-02-28 15:46:59,049 - INFO - Root Mean Square Error (RMSE): 220771.84
+2026-02-28 15:46:59,049 - INFO - Coefficient of Determination (R²): -465241.3573
+2026-02-28 15:46:59,049 - INFO - Mean Absolute Percentage Error (MAPE): 1332.20%
+2026-02-28 15:46:59,049 - INFO - Median Absolute Error: 177928.97
+2026-02-28 15:46:59,049 - INFO - sMAPE: 200.00%
+2026-02-28 15:46:59,049 - INFO - WAPE: 1349.14%
+2026-02-28 15:46:59,049 - INFO - ==================================================
+2026-02-28 15:46:59,049 - INFO - Test evaluation time: 0.00 seconds
+2026-02-28 15:46:59,050 - INFO - ==================================================
+2026-02-28 15:46:59,050 - INFO - OVERFITTING CHECK
+2026-02-28 15:46:59,050 - INFO - ==================================================
+2026-02-28 15:46:59,050 - WARNING - OVERFITTING DETECTED!
+2026-02-28 15:46:59,050 - WARNING -   - MAE shows overfitting
+2026-02-28 15:46:59,050 - WARNING -   - MAPE shows overfitting
+2026-02-28 15:46:59,050 - INFO - ==================================================
+2026-02-28 15:46:59,050 - INFO - WALK FORWARD VALIDATION
+2026-02-28 15:46:59,050 - INFO - ==================================================
+2026-02-28 15:46:59,050 - INFO - 
+--- Window 1/3 ---
+2026-02-28 15:46:59,061 - INFO - Window 1: Train=36, Val=6, Test=10
+2026-02-28 15:46:59,062 - INFO - Training model: Linear Regression
+2026-02-28 15:46:59,064 - INFO -    MAE: 389885.59 | RMSE: 419440.29 | R²: -5513956.3087 | MAPE: 2951.93%
+2026-02-28 15:46:59,065 - INFO -    Weighted Score: 279716.43 | Median AE: 375307.33
+2026-02-28 15:46:59,065 - INFO -    sMAPE: 200.00% | WAPE: 2959.73%
+2026-02-28 15:46:59,065 - INFO - Training model: Ridge Regression
+2026-02-28 15:46:59,067 - INFO -    MAE: 30922.06 | RMSE: 35356.18 | R²: -39178.0276 | MAPE: 235.65%
+2026-02-28 15:46:59,067 - INFO -    Weighted Score: 22602.96 | Median AE: 33545.96
+2026-02-28 15:46:59,068 - INFO -    sMAPE: 102.12% | WAPE: 234.74%
+2026-02-28 15:46:59,068 - INFO - Training model: Lasso Regression
+2026-02-28 15:46:59,070 - INFO -    MAE: 388043.08 | RMSE: 417476.34 | R²: -5462441.0432 | MAPE: 2937.99%
+2026-02-28 15:46:59,070 - INFO -    Weighted Score: 278398.20 | Median AE: 373763.78
+2026-02-28 15:46:59,070 - INFO -    sMAPE: 200.00% | WAPE: 2945.75%
+2026-02-28 15:46:59,070 - INFO - Training model: Random Forest
+2026-02-28 15:46:59,519 - INFO -    MAE: 76502.75 | RMSE: 131881.20 | R²: -545114.9461 | MAPE: 586.27%
+2026-02-28 15:46:59,519 - INFO -    Weighted Score: 64803.50 | Median AE: 676.93
+2026-02-28 15:46:59,519 - INFO -    sMAPE: 62.61% | WAPE: 580.75%
+2026-02-28 15:46:59,520 - INFO - Training model: Gradient Boosting
+2026-02-28 15:46:59,599 - INFO -    MAE: 100782.76 | RMSE: 174232.93 | R²: -951443.7682 | MAPE: 772.38%
+2026-02-28 15:46:59,599 - INFO -    Weighted Score: 85469.68 | Median AE: 399.61
+2026-02-28 15:46:59,599 - INFO -    sMAPE: 62.80% | WAPE: 765.07%
+2026-02-28 15:46:59,650 - INFO - Feature Importance (Random Forest):
+2026-02-28 15:46:59,651 - INFO -    Week: 0.2677
+2026-02-28 15:46:59,651 - INFO -    Prev_Week: 0.0535
+2026-02-28 15:46:59,651 - INFO -    MA: 0.0843
+2026-02-28 15:46:59,651 - INFO -    Change: 0.0075
+2026-02-28 15:46:59,651 - INFO -    Std: 0.2241
+2026-02-28 15:46:59,651 - INFO -    Lag2: 0.0199
+2026-02-28 15:46:59,651 - INFO -    Lag3: 0.0047
+2026-02-28 15:46:59,651 - INFO -    Week_Sin: 0.0003
+2026-02-28 15:46:59,651 - INFO -    Week_Cos: 0.3379
+2026-02-28 15:46:59,652 - INFO - Feature Importance (Gradient Boosting):
+2026-02-28 15:46:59,652 - INFO -    Week: 0.0824
+2026-02-28 15:46:59,652 - INFO -    Prev_Week: 0.0002
+2026-02-28 15:46:59,652 - INFO -    MA: 0.0176
+2026-02-28 15:46:59,652 - INFO -    Change: 0.0000
+2026-02-28 15:46:59,653 - INFO -    Std: 0.2466
+2026-02-28 15:46:59,653 - INFO -    Lag2: 0.0000
+2026-02-28 15:46:59,653 - INFO -    Lag3: 0.0378
+2026-02-28 15:46:59,653 - INFO -    Week_Sin: 0.0002
+2026-02-28 15:46:59,653 - INFO -    Week_Cos: 0.6152
+2026-02-28 15:46:59,653 - INFO - Training time: 0.59 seconds
+2026-02-28 15:46:59,654 - INFO - --------------------------------------------------
+2026-02-28 15:46:59,654 - INFO - BEST MODEL: Ridge Regression (Weighted Score = 22602.96)
+2026-02-28 15:46:59,654 - INFO - --------------------------------------------------
+2026-02-28 15:46:59,654 - INFO - Using stored scaler for Ridge Regression
+2026-02-28 15:46:59,657 - INFO - ==================================================
+2026-02-28 15:46:59,657 - INFO - TEST SET EVALUATION - Ridge Regression
+2026-02-28 15:46:59,657 - INFO - ==================================================
+2026-02-28 15:46:59,657 - INFO - Mean Absolute Error (MAE): 189101.39
+2026-02-28 15:46:59,657 - INFO - Root Mean Square Error (RMSE): 220771.84
+2026-02-28 15:46:59,657 - INFO - Coefficient of Determination (R²): -465241.3573
+2026-02-28 15:46:59,658 - INFO - Mean Absolute Percentage Error (MAPE): 1332.20%
+2026-02-28 15:46:59,658 - INFO - Median Absolute Error: 177928.97
+2026-02-28 15:46:59,658 - INFO - sMAPE: 200.00%
+2026-02-28 15:46:59,658 - INFO - WAPE: 1349.14%
+2026-02-28 15:46:59,658 - INFO - ==================================================
+2026-02-28 15:46:59,658 - INFO - Test evaluation time: 0.00 seconds
+2026-02-28 15:46:59,658 - INFO - 
+--- Window 2/3 ---
+2026-02-28 15:46:59,669 - INFO - Window 2: Train=32, Val=5, Test=15
+2026-02-28 15:46:59,672 - INFO - Training model: Linear Regression
+2026-02-28 15:46:59,674 - INFO -    MAE: 318018.04 | RMSE: 343877.31 | R²: -4972364.6067 | MAPE: 2461.02%
+2026-02-28 15:46:59,674 - INFO -    Weighted Score: 228522.79 | Median AE: 302758.98
+2026-02-28 15:46:59,674 - INFO -    sMAPE: 200.00% | WAPE: 2471.16%
+2026-02-28 15:46:59,674 - INFO - Training model: Ridge Regression
+2026-02-28 15:46:59,675 - INFO -    MAE: 105651.21 | RMSE: 105929.96 | R²: -471837.7291 | MAPE: 820.38%
+2026-02-28 15:46:59,675 - INFO -    Weighted Score: 74257.71 | Median AE: 107677.14
+2026-02-28 15:46:59,675 - INFO -    sMAPE: 160.70% | WAPE: 820.96%
+2026-02-28 15:46:59,676 - INFO - Training model: Lasso Regression
+2026-02-28 15:46:59,677 - INFO -    MAE: 317676.97 | RMSE: 343423.26 | R²: -4959242.4403 | MAPE: 2458.39%
+2026-02-28 15:46:59,677 - INFO -    Weighted Score: 228260.66 | Median AE: 302740.53
+2026-02-28 15:46:59,677 - INFO -    sMAPE: 200.00% | WAPE: 2468.51%
+2026-02-28 15:46:59,679 - INFO - Training model: Random Forest
+2026-02-28 15:47:00,141 - INFO -    MAE: 89351.27 | RMSE: 140355.79 | R²: -828354.3547 | MAPE: 703.24%
+2026-02-28 15:47:00,142 - INFO -    Weighted Score: 72957.76 | Median AE: 994.27
+2026-02-28 15:47:00,142 - INFO -    sMAPE: 76.45% | WAPE: 694.30%
+2026-02-28 15:47:00,142 - INFO - Training model: Gradient Boosting
+2026-02-28 15:47:00,170 - INFO -    MAE: 90562.52 | RMSE: 142605.51 | R²: -855122.0416 | MAPE: 712.81%
+2026-02-28 15:47:00,170 - INFO -    Weighted Score: 74016.20 | Median AE: 654.50
+2026-02-28 15:47:00,170 - INFO -    sMAPE: 74.83% | WAPE: 703.72%
+2026-02-28 15:47:00,220 - INFO - Feature Importance (Random Forest):
+2026-02-28 15:47:00,220 - INFO -    Week: 0.2638
+2026-02-28 15:47:00,220 - INFO -    Prev_Week: 0.0723
+2026-02-28 15:47:00,220 - INFO -    MA: 0.0803
+2026-02-28 15:47:00,220 - INFO -    Change: 0.0128
+2026-02-28 15:47:00,220 - INFO -    Std: 0.2141
+2026-02-28 15:47:00,220 - INFO -    Lag2: 0.0217
+2026-02-28 15:47:00,220 - INFO -    Lag3: 0.0034
+2026-02-28 15:47:00,220 - INFO -    Week_Sin: 0.0038
+2026-02-28 15:47:00,222 - INFO -    Week_Cos: 0.3279
+2026-02-28 15:47:00,222 - INFO - Feature Importance (Gradient Boosting):
+2026-02-28 15:47:00,222 - INFO -    Week: 0.3097
+2026-02-28 15:47:00,222 - INFO -    Prev_Week: 0.0002
+2026-02-28 15:47:00,222 - INFO -    MA: 0.0248
+2026-02-28 15:47:00,222 - INFO -    Change: 0.0000
+2026-02-28 15:47:00,222 - INFO -    Std: 0.2496
+2026-02-28 15:47:00,223 - INFO -    Lag2: 0.0000
+2026-02-28 15:47:00,223 - INFO -    Lag3: 0.0385
+2026-02-28 15:47:00,223 - INFO -    Week_Sin: 0.0005
+2026-02-28 15:47:00,223 - INFO -    Week_Cos: 0.3767
+2026-02-28 15:47:00,223 - INFO - Training time: 0.55 seconds
+2026-02-28 15:47:00,223 - INFO - --------------------------------------------------
+2026-02-28 15:47:00,224 - INFO - BEST MODEL: Random Forest (Weighted Score = 72957.76)
+2026-02-28 15:47:00,224 - INFO - --------------------------------------------------
+2026-02-28 15:47:00,286 - INFO - ==================================================
+2026-02-28 15:47:00,286 - INFO - TEST SET EVALUATION - Random Forest
+2026-02-28 15:47:00,286 - INFO - ==================================================
+2026-02-28 15:47:00,288 - INFO - Mean Absolute Error (MAE): 72804.68
+2026-02-28 15:47:00,288 - INFO - Root Mean Square Error (RMSE): 135744.19
+2026-02-28 15:47:00,288 - INFO - Coefficient of Determination (R²): -81684.4477
+2026-02-28 15:47:00,288 - INFO - Mean Absolute Percentage Error (MAPE): 524.23%
+2026-02-28 15:47:00,288 - INFO - Median Absolute Error: 1904.14
+2026-02-28 15:47:00,288 - INFO - sMAPE: 72.82%
+2026-02-28 15:47:00,288 - INFO - WAPE: 529.61%
+2026-02-28 15:47:00,289 - INFO - ==================================================
+2026-02-28 15:47:00,289 - INFO - Test evaluation time: 0.06 seconds
+2026-02-28 15:47:00,289 - INFO - 
+--- Window 3/3 ---
+2026-02-28 15:47:00,299 - INFO - Window 3: Train=28, Val=4, Test=20
+2026-02-28 15:47:00,302 - INFO - Training model: Linear Regression
+2026-02-28 15:47:00,303 - INFO -    MAE: 205745.83 | RMSE: 224242.88 | R²: -1224935.5115 | MAPE: 1684.59%
+2026-02-28 15:47:00,303 - INFO -    Weighted Score: 148226.87 | Median AE: 199740.03
+2026-02-28 15:47:00,303 - INFO -    sMAPE: 200.00% | WAPE: 1694.64%
+2026-02-28 15:47:00,303 - INFO - Training model: Ridge Regression
+2026-02-28 15:47:00,305 - INFO -    MAE: 181168.63 | RMSE: 183767.92 | R²: -822650.0976 | MAPE: 1489.04%
+2026-02-28 15:47:00,305 - INFO -    Weighted Score: 127784.61 | Median AE: 182118.91
+2026-02-28 15:47:00,305 - INFO -    sMAPE: 175.84% | WAPE: 1492.21%
+2026-02-28 15:47:00,305 - INFO - Training model: Lasso Regression
+2026-02-28 15:47:00,308 - INFO -    MAE: 212369.08 | RMSE: 230977.21 | R²: -1299613.3877 | MAPE: 1738.97%
+2026-02-28 15:47:00,308 - INFO -    Weighted Score: 152901.67 | Median AE: 206088.27
+2026-02-28 15:47:00,308 - INFO -    sMAPE: 200.00% | WAPE: 1749.19%
+2026-02-28 15:47:00,308 - INFO - Training model: Random Forest
+2026-02-28 15:47:00,784 - INFO -    MAE: 146268.33 | RMSE: 177710.52 | R²: -769311.0393 | MAPE: 1218.32%
+2026-02-28 15:47:00,785 - INFO -    Weighted Score: 109041.77 | Median AE: 166296.97
+2026-02-28 15:47:00,785 - INFO -    sMAPE: 143.92% | WAPE: 1204.75%
+2026-02-28 15:47:00,785 - INFO - Training model: Gradient Boosting
+2026-02-28 15:47:00,838 - INFO -    MAE: 153602.04 | RMSE: 217149.74 | R²: -1148667.9554 | MAPE: 1286.45%
+2026-02-28 15:47:00,838 - INFO -    Weighted Score: 120616.90 | Median AE: 153587.56
+2026-02-28 15:47:00,838 - INFO -    sMAPE: 93.22% | WAPE: 1265.15%
+2026-02-28 15:47:00,889 - INFO - Feature Importance (Random Forest):
+2026-02-28 15:47:00,889 - INFO -    Week: 0.2634
+2026-02-28 15:47:00,889 - INFO -    Prev_Week: 0.0669
+2026-02-28 15:47:00,889 - INFO -    MA: 0.0736
+2026-02-28 15:47:00,889 - INFO -    Change: 0.0135
+2026-02-28 15:47:00,889 - INFO -    Std: 0.2247
+2026-02-28 15:47:00,890 - INFO -    Lag2: 0.0218
+2026-02-28 15:47:00,890 - INFO -    Lag3: 0.0022
+2026-02-28 15:47:00,890 - INFO -    Week_Sin: 0.0091
+2026-02-28 15:47:00,890 - INFO -    Week_Cos: 0.3247
+2026-02-28 15:47:00,891 - INFO - Feature Importance (Gradient Boosting):
+2026-02-28 15:47:00,891 - INFO -    Week: 0.1983
+2026-02-28 15:47:00,891 - INFO -    Prev_Week: 0.0002
+2026-02-28 15:47:00,891 - INFO -    MA: 0.0131
+2026-02-28 15:47:00,891 - INFO -    Change: 0.0000
+2026-02-28 15:47:00,891 - INFO -    Std: 0.2989
+2026-02-28 15:47:00,891 - INFO -    Lag2: 0.0000
+2026-02-28 15:47:00,891 - INFO -    Lag3: 0.0391
+2026-02-28 15:47:00,891 - INFO -    Week_Sin: 0.0002
+2026-02-28 15:47:00,891 - INFO -    Week_Cos: 0.4502
+2026-02-28 15:47:00,893 - INFO - Training time: 0.59 seconds
+2026-02-28 15:47:00,893 - INFO - --------------------------------------------------
+2026-02-28 15:47:00,893 - INFO - BEST MODEL: Random Forest (Weighted Score = 109041.77)
+2026-02-28 15:47:00,893 - INFO - --------------------------------------------------
+2026-02-28 15:47:00,953 - INFO - ==================================================
+2026-02-28 15:47:00,953 - INFO - TEST SET EVALUATION - Random Forest
+2026-02-28 15:47:00,953 - INFO - ==================================================
+2026-02-28 15:47:00,953 - INFO - Mean Absolute Error (MAE): 63411.01
+2026-02-28 15:47:00,953 - INFO - Root Mean Square Error (RMSE): 123090.00
+2026-02-28 15:47:00,955 - INFO - Coefficient of Determination (R²): -47414.7302
+2026-02-28 15:47:00,955 - INFO - Mean Absolute Percentage Error (MAPE): 466.38%
+2026-02-28 15:47:00,955 - INFO - Median Absolute Error: 8703.30
+2026-02-28 15:47:00,955 - INFO - sMAPE: 84.78%
+2026-02-28 15:47:00,955 - INFO - WAPE: 468.76%
+2026-02-28 15:47:00,955 - INFO - ==================================================
+2026-02-28 15:47:00,955 - INFO - Test evaluation time: 0.06 seconds
+2026-02-28 15:47:00,956 - INFO - 
+==================================================
+2026-02-28 15:47:00,956 - INFO - WALK FORWARD SUMMARY
+2026-02-28 15:47:00,956 - INFO - ==================================================
+2026-02-28 15:47:00,956 - INFO - Mean MAE: 108439.03 ± 57165.68
+2026-02-28 15:47:00,956 - INFO - Mean MAPE: 774.27% ± 395.22%
+2026-02-28 15:47:00,956 - INFO - Coefficient of Variation (MAE): 0.5272
+2026-02-28 15:47:00,956 - INFO - Stability: LOW
+2026-02-28 15:47:00,965 - INFO - Best model saved: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\outputs\run_20260228_154658\best_model_Random_Forest.pkl
+2026-02-28 15:47:01,117 - ERROR - ERROR: x and y must have same first dimension, but have shapes (10,) and (20,)
+2026-02-28 15:47:01,120 - ERROR - Traceback (most recent call last):
+  File "c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\src\ai_sales_forecast_final.py", line 1313, in run_full_pipeline
+    self.create_visualizations(test)
+  File "c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\src\ai_sales_forecast_final.py", line 1029, in create_visualizations
+    ax1.plot(weeks, actual, 'b-o', label='Actual Sales', linewidth=2, markersize=6)
+  File "C:\Users\maamo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\matplotlib\axes\_axes.py", line 1777, in plot
+    lines = [*self._get_lines(self, *args, data=data, **kwargs)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maamo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\matplotlib\axes\_base.py", line 297, in __call__
+    yield from self._plot_args(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\maamo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\matplotlib\axes\_base.py", line 494, in _plot_args
+    raise ValueError(f"x and y must have same first dimension, but "
+ValueError: x and y must have same first dimension, but have shapes (10,) and (20,)
+

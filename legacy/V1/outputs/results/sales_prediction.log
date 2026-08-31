@@ -1,0 +1,360 @@
+2026-02-23 15:03:19,976 - INFO - 📁 المجلدات في: C:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي
+2026-02-23 15:03:19,977 - INFO - ============================================================
+2026-02-23 15:03:19,977 - INFO - تم تهيئة خط أنابيب التنبؤ بالمبيعات
+2026-02-23 15:03:19,977 - INFO - ============================================================
+2026-02-23 15:03:19,977 - INFO - ============================================================
+2026-02-23 15:03:19,977 - INFO - بدء تشغيل خط أنابيب التنبؤ بالمبيعات
+2026-02-23 15:03:19,978 - INFO - ============================================================
+2026-02-23 15:03:20,009 - INFO - ✅ تم قراءة البيانات من: Sales_Transactions_Dataset_Weekly - V2.csv (ترميز: latin-1)
+2026-02-23 15:03:20,009 - INFO - 📊 شكل البيانات: (1045, 107)
+2026-02-23 15:03:20,031 - INFO - ✅ تم معالجة 49 صف من البيانات
+2026-02-23 15:03:20,032 - INFO - 📊 التقسيم - تدريب: 32, تحقق: 5, اختبار: 12
+2026-02-23 15:03:20,040 - INFO - 🔄 تدريب نموذج: LinearRegression
+2026-02-23 15:03:20,058 - INFO -    MAE: 0.00, RMSE: 0.00, R²: 1.0000, MAPE: 0.00%
+2026-02-23 15:03:20,058 - INFO - 🔄 تدريب نموذج: Ridge
+2026-02-23 15:03:20,065 - INFO -    MAE: 222.33, RMSE: 334.37, R²: -3.1051, MAPE: 1.71%
+2026-02-23 15:03:20,065 - INFO - 🔄 تدريب نموذج: Lasso
+2026-02-23 15:03:20,071 - INFO -    MAE: 817.46, RMSE: 1008.32, R²: -36.3299, MAPE: 6.28%
+2026-02-23 15:03:20,071 - INFO - 🔄 تدريب نموذج: RandomForest
+2026-02-23 15:03:20,515 - INFO -    MAE: 492.59, RMSE: 519.21, R²: -8.8979, MAPE: 3.75%
+2026-02-23 15:03:20,515 - INFO - 🔄 تدريب نموذج: GradientBoosting
+2026-02-23 15:03:20,583 - INFO -    MAE: 132.59, RMSE: 210.67, R²: -0.6295, MAPE: 1.00%
+2026-02-23 15:03:20,583 - INFO - 🏆 أفضل نموذج: LinearRegression (MAE = 0.00)
+2026-02-23 15:03:20,584 - INFO - 📊 التقسيم - تدريب: 32, تحقق: 5, اختبار: 12
+2026-02-23 15:03:20,587 - INFO - 📈 نتائج الاختبار (LinearRegression):
+2026-02-23 15:03:20,587 - INFO -    MAE: 0.00, RMSE: 0.00, R²: 1.0000, MAPE: 0.00%
+2026-02-23 15:03:21,698 - INFO - 💾 تم حفظ الرسم: C:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\charts\sales_prediction_analysis.png
+2026-02-23 15:26:08,592 - INFO - Directory structure created at: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي
+2026-02-23 15:26:08,592 - INFO - ======================================================================
+2026-02-23 15:26:08,592 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-23 15:26:08,593 - INFO - ======================================================================
+2026-02-23 15:26:08,593 - INFO - ======================================================================
+2026-02-23 15:26:08,593 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-23 15:26:08,593 - INFO - ======================================================================
+2026-02-23 15:26:08,593 - INFO - 
+[STEP 1/7] Loading data...
+2026-02-23 15:26:08,608 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-23 15:26:08,608 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-23 15:26:08,608 - INFO - 
+[STEP 2/7] Preprocessing data...
+2026-02-23 15:26:08,610 - INFO - Found 52 week columns
+2026-02-23 15:26:08,621 - INFO - Created 8 new features
+2026-02-23 15:26:08,622 - INFO - Processed data: 49 rows with 10 columns
+2026-02-23 15:26:08,623 - INFO - 
+[STEP 3/7] Splitting data...
+2026-02-23 15:26:08,624 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 15:26:08,624 - INFO - 
+[STEP 4/7] Training models...
+2026-02-23 15:26:08,624 - ERROR - 
+❌ ERROR: cannot access local variable 'feature_cols' where it is not associated with a value
+2026-02-23 15:26:08,625 - ERROR - Traceback (most recent call last):
+  File "c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 1044, in run_full_pipeline
+    self.train_models(train, val)
+  File "c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 592, in train_models
+    X_train, y_train = self.prepare_features(train)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 536, in prepare_features
+    if feature_cols is None:
+       ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'feature_cols' where it is not associated with a value
+
+2026-02-23 15:34:03,180 - INFO - Directory structure created at: C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast
+2026-02-23 15:34:03,180 - INFO - ======================================================================
+2026-02-23 15:34:03,180 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-23 15:34:03,180 - INFO - ======================================================================
+2026-02-23 15:34:03,180 - INFO - ======================================================================
+2026-02-23 15:34:03,180 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-23 15:34:03,181 - INFO - ======================================================================
+2026-02-23 15:34:03,181 - INFO - 
+[STEP 1/7] Loading data...
+2026-02-23 15:34:03,198 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-23 15:34:03,198 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-23 15:34:03,198 - INFO - 
+[STEP 2/7] Preprocessing data...
+2026-02-23 15:34:03,198 - INFO - Found 52 week columns
+2026-02-23 15:34:03,211 - INFO - Created 8 new features
+2026-02-23 15:34:03,212 - INFO - Processed data: 49 rows with 10 columns
+2026-02-23 15:34:03,212 - INFO - 
+[STEP 3/7] Splitting data...
+2026-02-23 15:34:03,213 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 15:34:03,213 - INFO - 
+[STEP 4/7] Training models...
+2026-02-23 15:34:03,213 - ERROR - 
+❌ ERROR: cannot access local variable 'feature_cols' where it is not associated with a value
+2026-02-23 15:34:03,215 - ERROR - Traceback (most recent call last):
+  File "C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast\src\ai_sales_forecast.py", line 1044, in run_full_pipeline
+    self.train_models(train, val)
+  File "C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast\src\ai_sales_forecast.py", line 592, in train_models
+    X_train, y_train = self.prepare_features(train)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast\src\ai_sales_forecast.py", line 536, in prepare_features
+    if feature_cols is None:
+       ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'feature_cols' where it is not associated with a value
+
+2026-02-23 15:34:11,489 - INFO - Directory structure created at: C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast
+2026-02-23 15:34:11,489 - INFO - ======================================================================
+2026-02-23 15:34:11,489 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-23 15:34:11,489 - INFO - ======================================================================
+2026-02-23 15:34:11,489 - INFO - ======================================================================
+2026-02-23 15:34:11,489 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-23 15:34:11,489 - INFO - ======================================================================
+2026-02-23 15:34:11,490 - INFO - 
+[STEP 1/7] Loading data...
+2026-02-23 15:34:11,506 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-23 15:34:11,506 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-23 15:34:11,506 - INFO - 
+[STEP 2/7] Preprocessing data...
+2026-02-23 15:34:11,507 - INFO - Found 52 week columns
+2026-02-23 15:34:11,519 - INFO - Created 8 new features
+2026-02-23 15:34:11,520 - INFO - Processed data: 49 rows with 10 columns
+2026-02-23 15:34:11,521 - INFO - 
+[STEP 3/7] Splitting data...
+2026-02-23 15:34:11,522 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 15:34:11,522 - INFO - 
+[STEP 4/7] Training models...
+2026-02-23 15:34:11,522 - ERROR - 
+❌ ERROR: cannot access local variable 'feature_cols' where it is not associated with a value
+2026-02-23 15:34:11,523 - ERROR - Traceback (most recent call last):
+  File "C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast\src\ai_sales_forecast.py", line 1044, in run_full_pipeline
+    self.train_models(train, val)
+  File "C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast\src\ai_sales_forecast.py", line 592, in train_models
+    X_train, y_train = self.prepare_features(train)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maamo\OneDrive\Desktop\AI_Sales_Forecast\src\ai_sales_forecast.py", line 536, in prepare_features
+    if feature_cols is None:
+       ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'feature_cols' where it is not associated with a value
+
+2026-02-23 15:35:45,165 - INFO - Directory structure created at: C:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي
+2026-02-23 15:35:45,165 - INFO - ======================================================================
+2026-02-23 15:35:45,165 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-23 15:35:45,165 - INFO - ======================================================================
+2026-02-23 15:35:45,165 - INFO - ======================================================================
+2026-02-23 15:35:45,165 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-23 15:35:45,166 - INFO - ======================================================================
+2026-02-23 15:35:45,166 - INFO - 
+[STEP 1/7] Loading data...
+2026-02-23 15:35:45,185 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-23 15:35:45,186 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-23 15:35:45,186 - INFO - 
+[STEP 2/7] Preprocessing data...
+2026-02-23 15:35:45,186 - INFO - Found 52 week columns
+2026-02-23 15:35:45,199 - INFO - Created 8 new features
+2026-02-23 15:35:45,200 - INFO - Processed data: 49 rows with 10 columns
+2026-02-23 15:35:45,200 - INFO - 
+[STEP 3/7] Splitting data...
+2026-02-23 15:35:45,201 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 15:35:45,201 - INFO - 
+[STEP 4/7] Training models...
+2026-02-23 15:35:45,201 - ERROR - 
+❌ ERROR: cannot access local variable 'feature_cols' where it is not associated with a value
+2026-02-23 15:35:45,202 - ERROR - Traceback (most recent call last):
+  File "C:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 1044, in run_full_pipeline
+    self.train_models(train, val)
+  File "C:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 592, in train_models
+    X_train, y_train = self.prepare_features(train)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 536, in prepare_features
+    if feature_cols is None:
+       ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'feature_cols' where it is not associated with a value
+
+2026-02-23 15:42:05,253 - INFO - Directory structure created at: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي
+2026-02-23 15:42:05,254 - INFO - ======================================================================
+2026-02-23 15:42:05,254 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-23 15:42:05,254 - INFO - ======================================================================
+2026-02-23 15:42:05,254 - INFO - ======================================================================
+2026-02-23 15:42:05,254 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-23 15:42:05,254 - INFO - ======================================================================
+2026-02-23 15:42:05,254 - INFO - 
+[STEP 1/7] Loading data...
+2026-02-23 15:42:05,275 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-23 15:42:05,275 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-23 15:42:05,275 - INFO - 
+[STEP 2/7] Preprocessing data...
+2026-02-23 15:42:05,275 - INFO - Found 52 week columns
+2026-02-23 15:42:05,289 - INFO - Created 8 new features
+2026-02-23 15:42:05,290 - INFO - Processed data: 49 rows with 10 columns
+2026-02-23 15:42:05,290 - INFO - 
+[STEP 3/7] Splitting data...
+2026-02-23 15:42:05,291 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 15:42:05,291 - INFO - 
+[STEP 4/7] Training models...
+2026-02-23 15:42:05,292 - ERROR - 
+❌ ERROR: cannot access local variable 'feature_cols' where it is not associated with a value
+2026-02-23 15:42:05,293 - ERROR - Traceback (most recent call last):
+  File "c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 1044, in run_full_pipeline
+    self.train_models(train, val)
+  File "c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 592, in train_models
+    X_train, y_train = self.prepare_features(train)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\src\ai_sales_forecast.py", line 536, in prepare_features
+    if feature_cols is None:
+       ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'feature_cols' where it is not associated with a value
+
+2026-02-23 15:48:23,339 - INFO - Directory structure created at: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي
+2026-02-23 15:48:23,339 - INFO - ======================================================================
+2026-02-23 15:48:23,340 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-23 15:48:23,340 - INFO - ======================================================================
+2026-02-23 15:48:23,340 - INFO - ======================================================================
+2026-02-23 15:48:23,340 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-23 15:48:23,340 - INFO - ======================================================================
+2026-02-23 15:48:23,358 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-23 15:48:23,358 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-23 15:48:23,358 - INFO - Found 52 week columns
+2026-02-23 15:48:23,369 - INFO - Created 8 new features
+2026-02-23 15:48:23,370 - INFO - Processed data: 49 rows with 10 columns
+2026-02-23 15:48:23,371 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 15:48:23,374 - INFO - Training model: Linear Regression
+2026-02-23 15:48:23,376 - INFO -    MAE: 0.00 | RMSE: 0.00 | R²: 1.0000 | MAPE: 0.00%
+2026-02-23 15:48:23,376 - INFO - Training model: Ridge Regression
+2026-02-23 15:48:23,378 - INFO -    MAE: 222.33 | RMSE: 334.37 | R²: -3.1051 | MAPE: 1.71%
+2026-02-23 15:48:23,378 - INFO - Training model: Lasso Regression
+2026-02-23 15:48:23,380 - INFO -    MAE: 817.46 | RMSE: 1008.32 | R²: -36.3299 | MAPE: 6.28%
+2026-02-23 15:48:23,380 - INFO - Training model: Random Forest
+2026-02-23 15:48:23,820 - INFO -    MAE: 492.59 | RMSE: 519.21 | R²: -8.8979 | MAPE: 3.75%
+2026-02-23 15:48:23,820 - INFO - Training model: Gradient Boosting
+2026-02-23 15:48:23,887 - INFO -    MAE: 132.59 | RMSE: 210.67 | R²: -0.6295 | MAPE: 1.00%
+2026-02-23 15:48:23,887 - INFO - --------------------------------------------------
+2026-02-23 15:48:23,888 - INFO - BEST MODEL: Linear Regression (MAE = 0.00)
+2026-02-23 15:48:23,888 - INFO - --------------------------------------------------
+2026-02-23 15:48:23,889 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 15:48:23,892 - INFO - ==================================================
+2026-02-23 15:48:23,892 - INFO - TEST SET EVALUATION - Linear Regression
+2026-02-23 15:48:23,892 - INFO - ==================================================
+2026-02-23 15:48:23,892 - INFO - Mean Absolute Error (MAE): 0.00
+2026-02-23 15:48:23,892 - INFO - Root Mean Square Error (RMSE): 0.00
+2026-02-23 15:48:23,892 - INFO - Coefficient of Determination (R²): 1.0000
+2026-02-23 15:48:23,892 - INFO - Mean Absolute Percentage Error (MAPE): 0.00%
+2026-02-23 15:48:23,893 - INFO - ==================================================
+2026-02-23 15:48:24,576 - INFO - Chart saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\charts\sales_prediction_analysis.png
+2026-02-23 15:48:36,396 - INFO - CSV saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\results\test_results.csv
+2026-02-23 15:48:38,056 - INFO - Excel saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\data\prepared\Prepared_AI_Data_Output.xlsx
+2026-02-23 15:48:38,071 - INFO - Text report saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\results\prediction_report.txt
+2026-02-23 15:48:38,071 - INFO - ======================================================================
+2026-02-23 15:48:38,071 - INFO - PIPELINE COMPLETED SUCCESSFULLY!
+2026-02-23 15:48:38,072 - INFO - ======================================================================
+2026-02-23 22:58:56,766 - INFO - Directory structure created at: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي
+2026-02-23 22:58:56,766 - INFO - ======================================================================
+2026-02-23 22:58:56,766 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-23 22:58:56,766 - INFO - ======================================================================
+2026-02-23 22:58:56,766 - INFO - ======================================================================
+2026-02-23 22:58:56,767 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-23 22:58:56,767 - INFO - ======================================================================
+2026-02-23 22:58:56,799 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-23 22:58:56,799 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-23 22:58:56,799 - INFO - Found 52 week columns
+2026-02-23 22:58:56,815 - INFO - Created 8 new features
+2026-02-23 22:58:56,816 - INFO - Processed data: 49 rows with 10 columns
+2026-02-23 22:58:56,817 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 22:58:56,823 - INFO - Training model: Linear Regression
+2026-02-23 22:58:56,828 - INFO -    MAE: 0.00 | RMSE: 0.00 | R²: 1.0000 | MAPE: 0.00%
+2026-02-23 22:58:56,829 - INFO - Training model: Ridge Regression
+2026-02-23 22:58:56,830 - INFO -    MAE: 222.33 | RMSE: 334.37 | R²: -3.1051 | MAPE: 1.71%
+2026-02-23 22:58:56,831 - INFO - Training model: Lasso Regression
+2026-02-23 22:58:56,834 - INFO -    MAE: 817.46 | RMSE: 1008.32 | R²: -36.3299 | MAPE: 6.28%
+2026-02-23 22:58:56,834 - INFO - Training model: Random Forest
+2026-02-23 22:58:57,312 - INFO -    MAE: 492.59 | RMSE: 519.21 | R²: -8.8979 | MAPE: 3.75%
+2026-02-23 22:58:57,313 - INFO - Training model: Gradient Boosting
+2026-02-23 22:58:57,382 - INFO -    MAE: 132.59 | RMSE: 210.67 | R²: -0.6295 | MAPE: 1.00%
+2026-02-23 22:58:57,382 - INFO - --------------------------------------------------
+2026-02-23 22:58:57,382 - INFO - BEST MODEL: Linear Regression (MAE = 0.00)
+2026-02-23 22:58:57,382 - INFO - --------------------------------------------------
+2026-02-23 22:58:57,385 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-23 22:58:57,388 - INFO - ==================================================
+2026-02-23 22:58:57,388 - INFO - TEST SET EVALUATION - Linear Regression
+2026-02-23 22:58:57,388 - INFO - ==================================================
+2026-02-23 22:58:57,388 - INFO - Mean Absolute Error (MAE): 0.00
+2026-02-23 22:58:57,388 - INFO - Root Mean Square Error (RMSE): 0.00
+2026-02-23 22:58:57,388 - INFO - Coefficient of Determination (R²): 1.0000
+2026-02-23 22:58:57,389 - INFO - Mean Absolute Percentage Error (MAPE): 0.00%
+2026-02-23 22:58:57,389 - INFO - ==================================================
+2026-02-23 22:58:58,523 - INFO - Chart saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\charts\sales_prediction_analysis.png
+2026-02-23 22:59:59,367 - INFO - CSV saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\results\test_results.csv
+2026-02-23 23:00:00,583 - INFO - Excel saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\data\prepared\Prepared_AI_Data_Output.xlsx
+2026-02-25 21:08:54,642 - INFO - Directory structure created at: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي
+2026-02-25 21:08:54,643 - INFO - ======================================================================
+2026-02-25 21:08:54,643 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-25 21:08:54,643 - INFO - ======================================================================
+2026-02-25 21:08:54,643 - INFO - ======================================================================
+2026-02-25 21:08:54,643 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-25 21:08:54,643 - INFO - ======================================================================
+2026-02-25 21:08:54,694 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-25 21:08:54,694 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-25 21:08:54,694 - INFO - Found 52 week columns
+2026-02-25 21:08:54,718 - INFO - Created 8 new features
+2026-02-25 21:08:54,722 - INFO - Processed data: 49 rows with 10 columns
+2026-02-25 21:08:54,723 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-25 21:08:54,730 - INFO - Training model: Linear Regression
+2026-02-25 21:08:54,746 - INFO -    MAE: 0.00 | RMSE: 0.00 | R²: 1.0000 | MAPE: 0.00%
+2026-02-25 21:08:54,746 - INFO - Training model: Ridge Regression
+2026-02-25 21:08:54,753 - INFO -    MAE: 222.33 | RMSE: 334.37 | R²: -3.1051 | MAPE: 1.71%
+2026-02-25 21:08:54,754 - INFO - Training model: Lasso Regression
+2026-02-25 21:08:54,758 - INFO -    MAE: 817.46 | RMSE: 1008.32 | R²: -36.3299 | MAPE: 6.28%
+2026-02-25 21:08:54,758 - INFO - Training model: Random Forest
+2026-02-25 21:08:55,215 - INFO -    MAE: 492.59 | RMSE: 519.21 | R²: -8.8979 | MAPE: 3.75%
+2026-02-25 21:08:55,216 - INFO - Training model: Gradient Boosting
+2026-02-25 21:08:55,284 - INFO -    MAE: 132.59 | RMSE: 210.67 | R²: -0.6295 | MAPE: 1.00%
+2026-02-25 21:08:55,284 - INFO - --------------------------------------------------
+2026-02-25 21:08:55,284 - INFO - BEST MODEL: Linear Regression (MAE = 0.00)
+2026-02-25 21:08:55,284 - INFO - --------------------------------------------------
+2026-02-25 21:08:55,286 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-25 21:08:55,288 - INFO - ==================================================
+2026-02-25 21:08:55,289 - INFO - TEST SET EVALUATION - Linear Regression
+2026-02-25 21:08:55,289 - INFO - ==================================================
+2026-02-25 21:08:55,289 - INFO - Mean Absolute Error (MAE): 0.00
+2026-02-25 21:08:55,289 - INFO - Root Mean Square Error (RMSE): 0.00
+2026-02-25 21:08:55,289 - INFO - Coefficient of Determination (R²): 1.0000
+2026-02-25 21:08:55,289 - INFO - Mean Absolute Percentage Error (MAPE): 0.00%
+2026-02-25 21:08:55,289 - INFO - ==================================================
+2026-02-25 21:08:56,488 - INFO - Chart saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\charts\sales_prediction_analysis.png
+2026-02-25 21:09:33,854 - INFO - CSV saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\results\test_results.csv
+2026-02-25 21:09:35,647 - INFO - Excel saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\data\prepared\Prepared_AI_Data_Output.xlsx
+2026-02-25 21:09:35,659 - INFO - Text report saved: c:\Users\maamo\OneDrive\Desktop\برنامج الذكاء الاصطناعي\outputs\results\prediction_report.txt
+2026-02-25 21:09:35,660 - INFO - ======================================================================
+2026-02-25 21:09:35,660 - INFO - PIPELINE COMPLETED SUCCESSFULLY!
+2026-02-25 21:09:35,660 - INFO - ======================================================================
+2026-02-26 16:35:50,041 - INFO - Directory structure created at: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V1
+2026-02-26 16:35:50,042 - INFO - ======================================================================
+2026-02-26 16:35:50,042 - INFO - SALES PREDICTION PIPELINE INITIALIZED
+2026-02-26 16:35:50,042 - INFO - ======================================================================
+2026-02-26 16:35:50,042 - INFO - ======================================================================
+2026-02-26 16:35:50,042 - INFO - STARTING SALES PREDICTION PIPELINE
+2026-02-26 16:35:50,042 - INFO - ======================================================================
+2026-02-26 16:35:50,073 - INFO - Data loaded from: Sales_Transactions_Dataset_Weekly - V2.csv (encoding: latin-1)
+2026-02-26 16:35:50,073 - INFO - Data shape: 1045 rows, 107 columns
+2026-02-26 16:35:50,073 - INFO - Found 52 week columns
+2026-02-26 16:35:50,092 - INFO - Created 8 new features
+2026-02-26 16:35:50,095 - INFO - Processed data: 49 rows with 10 columns
+2026-02-26 16:35:50,096 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-26 16:35:50,103 - INFO - Training model: Linear Regression
+2026-02-26 16:35:50,109 - INFO -    MAE: 0.00 | RMSE: 0.00 | R²: 1.0000 | MAPE: 0.00%
+2026-02-26 16:35:50,109 - INFO - Training model: Ridge Regression
+2026-02-26 16:35:50,111 - INFO -    MAE: 222.33 | RMSE: 334.37 | R²: -3.1051 | MAPE: 1.71%
+2026-02-26 16:35:50,111 - INFO - Training model: Lasso Regression
+2026-02-26 16:35:50,115 - INFO -    MAE: 817.46 | RMSE: 1008.32 | R²: -36.3299 | MAPE: 6.28%
+2026-02-26 16:35:50,115 - INFO - Training model: Random Forest
+2026-02-26 16:35:50,565 - INFO -    MAE: 492.59 | RMSE: 519.21 | R²: -8.8979 | MAPE: 3.75%
+2026-02-26 16:35:50,565 - INFO - Training model: Gradient Boosting
+2026-02-26 16:35:50,631 - INFO -    MAE: 132.59 | RMSE: 210.67 | R²: -0.6295 | MAPE: 1.00%
+2026-02-26 16:35:50,632 - INFO - --------------------------------------------------
+2026-02-26 16:35:50,632 - INFO - BEST MODEL: Linear Regression (MAE = 0.00)
+2026-02-26 16:35:50,632 - INFO - --------------------------------------------------
+2026-02-26 16:35:50,635 - INFO - Data split: Train=32, Validation=5, Test=12
+2026-02-26 16:35:50,637 - INFO - ==================================================
+2026-02-26 16:35:50,637 - INFO - TEST SET EVALUATION - Linear Regression
+2026-02-26 16:35:50,637 - INFO - ==================================================
+2026-02-26 16:35:50,637 - INFO - Mean Absolute Error (MAE): 0.00
+2026-02-26 16:35:50,637 - INFO - Root Mean Square Error (RMSE): 0.00
+2026-02-26 16:35:50,638 - INFO - Coefficient of Determination (R²): 1.0000
+2026-02-26 16:35:50,638 - INFO - Mean Absolute Percentage Error (MAPE): 0.00%
+2026-02-26 16:35:50,638 - INFO - ==================================================
+2026-02-26 16:35:51,704 - INFO - Chart saved: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V1\outputs\charts\sales_prediction_analysis.png
+2026-02-26 16:35:56,718 - INFO - CSV saved: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V1\outputs\results\test_results.csv
+2026-02-26 16:35:58,063 - INFO - Excel saved: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V1\data\prepared\Prepared_AI_Data_Output.xlsx
+2026-02-26 16:35:58,073 - INFO - Text report saved: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V1\outputs\results\prediction_report.txt
+2026-02-26 16:35:58,074 - INFO - ======================================================================
+2026-02-26 16:35:58,074 - INFO - PIPELINE COMPLETED SUCCESSFULLY!
+2026-02-26 16:35:58,074 - INFO - ======================================================================

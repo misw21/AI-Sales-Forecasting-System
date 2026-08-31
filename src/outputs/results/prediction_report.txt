@@ -1,0 +1,73 @@
+
+================================================================================
+                    WEEKLY SALES PREDICTION REPORT
+================================================================================
+Report Generated: 2026-02-28 15:13:43
+================================================================================
+
+1. MODEL SUMMARY
+----------------
+Selected Model: Linear Regression
+
+Performance Metrics:
+- Mean Absolute Error (MAE): 0.00
+- Root Mean Square Error (RMSE): 0.00
+- Coefficient of Determination (R²): 1.0000
+- Mean Absolute Percentage Error (MAPE): 0.00%
+
+2. MODEL COMPARISON
+-------------------
+  Linear Regression:
+    - MAE: 0.00
+    - RMSE: 0.00
+    - R²: 1.0000
+    - MAPE: 0.00%
+
+  Ridge Regression:
+    - MAE: 222.33
+    - RMSE: 334.37
+    - R²: -3.1051
+    - MAPE: 1.71%
+
+  Lasso Regression:
+    - MAE: 817.46
+    - RMSE: 1008.32
+    - R²: -36.3299
+    - MAPE: 6.28%
+
+  Random Forest:
+    - MAE: 492.59
+    - RMSE: 519.21
+    - R²: -8.8979
+    - MAPE: 3.75%
+
+  Gradient Boosting:
+    - MAE: 132.59
+    - RMSE: 210.67
+    - R²: -0.6295
+    - MAPE: 1.00%
+
+
+3. DETAILED PREDICTIONS
+-----------------------
+ Week  Actual_Sales  Predicted_Sales  Error  Error_Percentage  Predicted_Revenue_JOD
+   40       13272.0          13272.0    0.0               0.0                33180.0
+   41       13366.0          13366.0    0.0               0.0                33415.0
+   42       13616.0          13616.0    0.0               0.0                34040.0
+   43       13492.0          13492.0    0.0               0.0                33730.0
+   44       13680.0          13680.0    0.0               0.0                34200.0
+   45       13878.0          13878.0    0.0               0.0                34695.0
+   46       14144.0          14144.0    0.0               0.0                35360.0
+   47       14064.0          14064.0    0.0               0.0                35160.0
+   48       14070.0          14070.0    0.0               0.0                35175.0
+   49       14428.0          14428.0    0.0               0.0                36070.0
+   50       14374.0          14374.0    0.0               0.0                35935.0
+   51       14418.0          14418.0    0.0               0.0                36045.0
+
+4. PERFORMANCE ASSESSMENT
+-------------------------
+EXCELLENT: Model accuracy is very high
+
+================================================================================
+                           END OF REPORT
+================================================================================

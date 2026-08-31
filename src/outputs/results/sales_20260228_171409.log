@@ -1,0 +1,23 @@
+
+============================================================
+RUNNING FULL PIPELINE
+============================================================
+Data loaded: 52 weeks (0.02s)
+Split: Train=36, Val=6, Test=10
+
+==================================================
+TRAINING MODELS
+==================================================
+
+==================================================
+TEST RESULTS - Ridge Regression
+==================================================
+  Mean Absolute Error (MAE): 189,101.39
+  Root Mean Square Error (RMSE): 220,771.84
+  R2 Score: -465241.3573
+  MAPE: 1332.20%
+==================================================
+
+>>> Results saved: C:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\outputs\run_20260228_171409
+
+>>> Total time: 1.02 seconds

@@ -1,0 +1,19 @@
+2026-02-28 17:06:04,075 - INFO - ======================================================================
+2026-02-28 17:06:04,075 - INFO - SALES PREDICTION PIPELINE V3 FINAL INITIALIZED
+2026-02-28 17:06:04,075 - INFO - Data Version: V3
+2026-02-28 17:06:04,075 - INFO - Mode: full
+2026-02-28 17:06:04,075 - INFO - Random Seed: 42
+2026-02-28 17:06:04,075 - INFO - ======================================================================
+2026-02-28 17:06:04,075 - INFO - ======================================================================
+2026-02-28 17:06:04,076 - INFO - STARTING SALES PREDICTION PIPELINE V3 FINAL
+2026-02-28 17:06:04,076 - INFO - Data Version: V3
+2026-02-28 17:06:04,076 - INFO - ======================================================================
+2026-02-28 17:06:04,076 - ERROR - Data file not found! Please place data in: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\data\raw
+2026-02-28 17:06:04,076 - ERROR - ERROR: Data file not found! Please place data in: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\data\raw
+2026-02-28 17:06:04,077 - ERROR - Traceback (most recent call last):
+  File "c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\src\ai_sales_forecast_final.py", line 1281, in run_full_pipeline
+    self.load_data()
+  File "c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\src\ai_sales_forecast_final.py", line 399, in load_data
+    raise FileNotFoundError(error_msg)
+FileNotFoundError: Data file not found! Please place data in: c:\Users\maamo\OneDrive\Desktop\AI system for sales and income (weekly) for a small shopbusiness V2 - Copy\data\raw
+
